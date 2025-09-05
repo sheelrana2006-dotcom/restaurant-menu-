@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Khana Khazana</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background-color: rgba(211, 84, 0, 0.9);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-style: italic;
+      font-size: 20px;
+    }
+    .search-box {
+      text-align: center;
+      margin: 20px;
+    }
+    .search-box input {
+      padding: 10px;
+      width: 60%;
+      font-size: 16px;
+      border: 2px solid #d35400;
+      border-radius: 5px;
+    }
+    .delivery {
+      text-align: center;
+      margin: 10px;
+      font-weight: bold;
+      color: red; /* Changed to red */
+      font-size: 18px;
+    }
+    .menu-section {
+      margin: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .menu-section h2 {
+      color: #d35400;
+      border-bottom: 3px solid #d35400;
+      padding-bottom: 5px;
+    }
+    .dish {
+      display: grid;
+      grid-template-columns: 2fr 1fr auto;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .dish:last-child {
+      border-bottom: none;
+    }
+    .dish-name {
+      font-weight: bold;
+    }
+    .price {
+      text-align: right;
+      font-weight: bold;
+      color: green;
+    }
+    .order-btn {
+      background: linear-gradient(45deg, #e67e22, #d35400);
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .order-btn:hover {
+      background: linear-gradient(45deg, #d35400, #e67e22);
+    }
+    #cart {
+      margin: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(46, 204, 113, 0.9);
+      color: white;
+    }
+    #cart h2 {
+      margin-top: 0;
+    }
+    /* Reviews Section */
+    #reviews {
+      margin: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(255,255,255,0.9);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    #reviews h2 {
+      color: #8e44ad;
+      border-bottom: 3px solid #8e44ad;
+      padding-bottom: 5px;
+    }
+    .review {
+      margin: 10px 0;
+      padding: 10px;
+      background: #f4f0ff;
+      border-left: 4px solid #8e44ad;
+      border-radius: 5px;
+    }
+    .review strong {
+      color: #8e44ad;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍴 Khana Khazana</h1>
+    <p>"Where Every Bite is a Treasure"</p>
+  </header>
+
+  <div class="search-box">
+    <input type="text" placeholder="🔍 Search for a dish...">
+  </div>
+
+  <div class="delivery">🚚 Home Delivery Available</div>
+
+  <!-- Indian Cuisine -->
+  <div class="menu-section">
+    <h2>🇮🇳 Indian Cuisine</h2>
+    <div class="dish"><span class="dish-name">🥘 Paneer Butter Masala</span> <span class="price">₹250</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍛 Chicken Biryani</span> <span class="price">₹300</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🥞 Masala Dosa</span> <span class="price">₹150</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍲 Dal Makhani</span> <span class="price">₹200</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍴 Chole Bhature</span> <span class="price">₹180</span> <button class="order-btn">Order</button></div>
+  </div>
+
+  <!-- Chinese Cuisine -->
+  <div class="menu-section">
+    <h2>🥢 Chinese Cuisine</h2>
+    <div class="dish"><span class="dish-name">🍜 Veg Hakka Noodles</span> <span class="price">₹180</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍗 Chicken Manchurian</span> <span class="price">₹220</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🥟 Spring Rolls</span> <span class="price">₹120</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍚 Fried Rice</span> <span class="price">₹160</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🥣 Hot & Sour Soup</span> <span class="price">₹140</span> <button class="order-btn">Order</button></div>
+  </div>
+
+  <!-- Italian Cuisine -->
+  <div class="menu-section">
+    <h2>🍕 Italian Cuisine</h2>
+    <div class="dish"><span class="dish-name">🍕 Margherita Pizza</span> <span class="price">₹200</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍝 Pasta Alfredo</span> <span class="price">₹240</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍲 Lasagna</span> <span class="price">₹280</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🥖 Garlic Bread</span> <span class="price">₹120</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍮 Tiramisu</span> <span class="price">₹200</span> <button class="order-btn">Order</button></div>
+  </div>
+
+  <!-- Desserts -->
+  <div class="menu-section">
+    <h2>🍨 Desserts</h2>
+    <div class="dish"><span class="dish-name">🍩 Gulab Jamun</span> <span class="price">₹100</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍫 Chocolate Brownie</span> <span class="price">₹150</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍦 Ice Cream Sundae</span> <span class="price">₹130</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🥥 Rasgulla</span> <span class="price">₹110</span> <button class="order-btn">Order</button></div>
+    <div class="dish"><span class="dish-name">🍰 Cheesecake</span> <span class="price">₹180</span> <button class="order-btn">Order</button></div>
+  </div>
+
+  <!-- Cart -->
+  <div id="cart">
+    <h2>🛒 Your Cart</h2>
+    <p>I'm empty fill me up quickly!<p>
+  </div>
+
+  <!-- Reviews -->
+  <div id="reviews">
+    <h2>💬 Customer Reviews</h2>
+    <div class="review"><strong>Riya:</strong> "Amazing food! Loved the Paneer Butter Masala 😍"</div>
+    <div class="review"><strong>Arjun:</strong> "Fast delivery and tasty pizzas 🍕🔥"</div>
+    <div class="review"><strong>Ananya:</strong> "Desserts were heavenly, especially the cheesecake! 🍰"</div>
+  </div>
+
+</body>
+</html>
